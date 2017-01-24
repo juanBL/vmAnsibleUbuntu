@@ -14,18 +14,5 @@
     - name: "Show message if distribution is RedHat"
       debug: msg="Is RedHat!"
       when: ansible_os_family == "RedHat"
-
-    - name: Install Apache
-      apt: name=apache2 state=present
-
-    - name: Add configuraction file in Apache conf.d
-      copy: src=files/configuration.conf dest=/etc/apache2/configuration.conf
-
-    - name: Create default HTML with SO version
-      template: src=templates/index.html dest=/var/www/index_new.html
-
-    - name: restart Apache
-      service: name=apache2 state=restarted
-
-    - name: debug
-      debug: var=host_name
+  roles:
+    - apache
