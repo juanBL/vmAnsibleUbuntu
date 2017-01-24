@@ -1,2 +1,9 @@
 [webservers]
 192.168.33.10
+
+[databases]
+192.168.33.10
+
+[infraestructure:children]
+webservers
+databases
