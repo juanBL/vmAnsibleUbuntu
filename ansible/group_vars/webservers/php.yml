@@ -1,0 +1,4 @@
+php_packages:
+   - php5-mysqlnd
+   - php5-curl
+   - php5-memcache
