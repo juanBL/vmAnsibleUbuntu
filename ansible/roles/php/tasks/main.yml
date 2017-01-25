@@ -1,0 +1,11 @@
+- name: Install PHP
+  apt: name=php5 state=present
+
+- name: Install PHP Modules
+  action: apt pkg={{item}} state=installed
+  with_items:
+       - php5-mysqlnd
+       - php5-curl
+       - php5-memcache
+       - php5-xdebug
+
