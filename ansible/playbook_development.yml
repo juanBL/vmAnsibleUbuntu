@@ -6,3 +6,5 @@
   roles:
     - apache
     - php
+    - geerlingguy.memcached
+    - geerlingguy.ntp
