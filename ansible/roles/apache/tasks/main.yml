@@ -6,6 +6,7 @@
 
   - name: Create default HTML with SO version
     template: src=templates/index.html dest=/home/vagrant/index_new.html
+    notify: restart apache
 
   - name: restart Apache
     service: name=apache2 state=restarted
